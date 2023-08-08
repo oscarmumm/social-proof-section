@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft--Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: url('../images/bg-pattern-top-mobile.svg') no-repeat;
+}
+
+html {
+    font-size: 15px;
+    font-family: "League Spartan", sans-serif;
+    position: relative;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    padding: 3rem;
+    flex-direction: column;
+}
+
+.title-section {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+h1 {
+    color: var(--Very-Dark-Magenta);
+    font-size: 2.5rem;
+    padding: 0 2rem;
+}
+
+.title-section p {
+    color: var(--Dark-Grayish-Magenta);
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+.rating-div {
+    flex-direction: column;
+    width: 100%;
+}
+
+.rating-div span {
+    padding: 1rem;
+    margin: 0.5rem;
+    background: var(--Light-Grayish-Magenta);
+    border-radius: 10px;
+    width: 100%;
+    font-weight: bold;
+    color: var(--Very-Dark-Magenta);
+}
+
+.rating-div span div {
+    margin-bottom: 0.5rem;
+}
+
+.reviews-section {
+    flex-direction: column;
+}
+
+.review-card {
+    background: var(--Very-Dark-Magenta);
+    color: var(--Light-Grayish-Magenta);
+    margin: 1rem 0;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.review-card-buyer-profile {
+    display: grid;
+    grid-template-rows: repeat(2, 20px);
+    grid-template-columns: 40px auto;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.review-card-buyer-profile h4,
+.review-card-buyer-profile h5 {
+    margin-left: 1rem;
+}
+
+.review-card-buyer-profile h5 {
+    color: var(--Soft--Pink);
+}
+
+.review-card-img {
+    width: 40px;
+    border-radius: 50%;
+    grid-row: 1 / 3;
+}
+
+.review-card p {
+    line-height: 1.5rem;
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+}
+.attribution a {
+    color: var(--Very-Dark-Magenta);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: url('../images/bg-pattern-top-desktop.svg') no-repeat,
+    url('../images/bg-pattern-bottom-desktop.svg') right no-repeat;
+  }
+  .main-container {
+    max-width: 1200px;
+  }
+    .title-section {
+        flex-direction: row;
+    }
+    .title-div {
+        width: 30%;
+        text-align: start;
+    }
+    h1 {
+      padding: 0;
+    }
+    .rating-div {
+        width: 70%;
+        align-items: flex-end;
+    }
+    .rating-div span {
+        max-width: 380px;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        place-items: start;
+    }
+    .rating-div span div {
+        margin-bottom: 0;
+    }
+    .rating-div span:nth-child(1) {
+        margin: .5rem 6rem .5rem auto;
+    }
+    .rating-div span:nth-child(2) {
+        margin: .5rem 3rem .5rem auto;
+    }
+    .rating-div span:nth-child(3) {
+        margin: .5rem 0;
+    }
+    .reviews-section {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .review-card {
+        height: 250px;
+        margin: 0;
+    }
+    .review-card:nth-child(1) {
+        margin: 0;
+    }
+    .review-card:nth-child(2) {
+        margin: 1rem 1.5rem auto 1.5rem;
+    }
+    .review-card:nth-child(3) {
+        margin: 2rem 0 auto 0;
+    }
+}
